@@ -8,15 +8,15 @@ namespace Lægeklinik.Codes
 {
     abstract class Person
     {
-        public string Fornavn { get; }
-        public string Efternavn { get; }
+        public string? ForNavn { get; set; }
+        public string? EfterNavn { get; set; }
+        public int TlfNr { get; set; }
 
-        public Person(string fornavn, string efternavn)
+        public Person(string? fornavn, string? efternavn, int tlfnr)
         {
-            Fornavn = fornavn;
-            Efternavn = efternavn;
+            ForNavn = fornavn;
+            EfterNavn = efternavn;
+            TlfNr = tlfnr;
         }
-
-        public abstract void ShowInfo();
     }
 }
